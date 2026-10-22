@@ -1,0 +1,17 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# raw downloads stay local (too large for GitHub)
+data-raw/*
+!data-raw/README.md
+
+# deployment credentials and records
+rsconnect/
+.Renviron
+
+# OS clutter
+.DS_Store
+Thumbs.db

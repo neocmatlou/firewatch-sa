@@ -1,0 +1,121 @@
+/* =========================================================================
+   FIREWATCH SA - styling
+   Fire motifs are kept to a few touches: the flame logo, an ember gradient
+   line under the navbar, the ember "Run" button, and warm accents.
+   ========================================================================= */
+
+:root {
+  --fw-ember: #D9480F;
+  --fw-flame: #F08C00;
+  --fw-amber: #FFB703;
+  --fw-deep: #9D0208;
+  --fw-charcoal: #1F1A17;
+  --fw-ash: #FBF8F4;
+  --fw-smoke: #6B625C;
+  --fw-line: #E9E2DA;
+}
+
+/* ---- navbar ---------------------------------------------------------- */
+.navbar {
+  background-color: var(--fw-charcoal) !important;
+  border-bottom: none !important;
+}
+.navbar .nav-link,
+.navbar .navbar-brand { color: #EDE6DE !important; }
+.navbar .nav-link:hover { color: #FFFFFF !important; }
+.navbar .nav-link.active {
+  color: var(--fw-amber) !important;
+  font-weight: 600;
+}
+.nav-note { color: #A89F97; font-size: 0.8rem; letter-spacing: 0.02em; }
+
+.brand {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600; letter-spacing: 0.08em; font-size: 1.35rem;
+}
+.brand-sa { color: var(--fw-amber); }
+.flame-logo { vertical-align: middle; }
+
+/* thin ember gradient under the navbar - the main "fire" accent */
+.ember-line {
+  height: 3px;
+  background: linear-gradient(90deg, var(--fw-deep), var(--fw-ember) 35%, var(--fw-flame) 70%, var(--fw-amber));
+}
+
+/* ---- sidebar --------------------------------------------------------- */
+.bslib-sidebar-layout > .sidebar { background-color: #F4EEE7; }
+.sidebar-title { font-family: "Barlow Semi Condensed", sans-serif; letter-spacing: 0.03em; }
+
+.btn-fire {
+  background: linear-gradient(135deg, var(--fw-ember), var(--fw-flame));
+  border: none; color: #fff; font-weight: 600; letter-spacing: 0.02em;
+  padding: 0.55rem 1rem;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+.btn-fire:hover, .btn-fire:focus {
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(240, 140, 0, 0.25), 0 4px 14px rgba(217, 72, 15, 0.35);
+}
+.btn-fire:active { transform: translateY(1px); }
+
+.sidebar-downloads { display: flex; gap: 0.5rem; }
+.sidebar-downloads .btn { flex: 1; }
+
+.caveat { font-size: 0.8rem; color: var(--fw-smoke); margin-top: 0.5rem; }
+
+/* ---- value boxes ----------------------------------------------------- */
+.bslib-value-box {
+  border-left: 4px solid var(--fw-ember) !important;
+  background-color: #FFFFFF;
+}
+.bslib-value-box .value-box-showcase { color: var(--fw-ember); }
+.bslib-value-box .value-box-value { font-family: "Barlow Semi Condensed", sans-serif; font-weight: 600; }
+.bslib-value-box small { color: var(--fw-smoke); }
+
+/* ---- cards ----------------------------------------------------------- */
+.card { border-color: var(--fw-line); }
+.card-header {
+  background-color: #FFFFFF;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.9rem;
+  border-bottom: 1px solid var(--fw-line);
+}
+
+/* ---- results --------------------------------------------------------- */
+.result-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; }
+.method-chip { font-size: 0.8rem; color: var(--fw-smoke); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.pattern-badge {
+  padding: 0.2rem 0.7rem; border-radius: 999px; font-weight: 600; font-size: 0.85rem; color: #fff;
+}
+.pattern-badge.clustered { background-color: var(--fw-ember); }
+.pattern-badge.random    { background-color: var(--fw-smoke); }
+.pattern-badge.dispersed { background-color: #3D5A80; }
+
+.callout {
+  border-left: 4px solid var(--fw-amber);
+  background-color: #FFF8EC;
+  padding: 0.75rem 0.9rem; border-radius: 0.4rem;
+  font-size: 0.92rem; line-height: 1.45; margin-bottom: 0.8rem;
+}
+.stale-note {
+  font-size: 0.82rem; color: var(--fw-deep); background: #FDECEA;
+  padding: 0.4rem 0.7rem; border-radius: 0.4rem; margin-bottom: 0.6rem;
+}
+
+.empty-state { text-align: center; padding: 2.5rem 1rem; color: var(--fw-smoke); }
+.empty-state h5 { margin-top: 0.8rem; color: #231F1C; }
+
+table.table { font-size: 0.88rem; }
+
+/* ---- about ----------------------------------------------------------- */
+.about h3 { color: var(--fw-ember); }
+.about h4 { margin-top: 1.2rem; }
+.about table { font-size: 0.9rem; }
+
+/* ---- small screens --------------------------------------------------- */
+@media (max-width: 768px) {
+  .brand { font-size: 1.1rem; }
+  .nav-note { display: none; }
+}
